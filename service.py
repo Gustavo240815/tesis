@@ -8,10 +8,8 @@ import torch
 from facenet_pytorch import MTCNN
 import matplotlib.pyplot as plt
 import face_recognition
-
 import json
 import base64
-
 import numpy as np
 import pymongo
 
@@ -23,7 +21,7 @@ CORS(app, resources={
     r"/borrar_contenido": {"origins": "http://localhost:4200"}
 })
 
-# Conectarse a la base de datos de MongoDB te quiero mucho <3
+# Conectarse a la base de datos de MongoDB
 client = pymongo.MongoClient('mongodb://localhost:27017')
 database = client['reconocimiento']
 collection = database['personas']
